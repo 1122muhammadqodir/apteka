@@ -1,0 +1,138 @@
+<!DOCTYPE htm>
+<html>
+<head>
+
+<title>
+<body>
+<h1>abs- zagolovoklar</h1>
+<p> - abzats(maxsus)</p>
+align atributi: left, center, right
+Ko'rinishi:
+<Hx align=”left,center,right”> … </Hx> x=1..6
+<p align=”left,center,right”> … </p>
+<b> - qalin shrift
+<i> - kursiv shrift
+<u> - tagiga chizib yozish
+<big> - standart(katta) shrift
+<small> - standart(eng kichik) shrift
+<strike> - yozuvning o'rtasiga chizish(gorizontal)
+<sub> - indexga yozish
+<sup> - darajaga yozish
+<tt> - maxsus shrift
+<font> - shriftni tog'rilash:
+Ko'rinishi:
+<font face="shrift nomi" size="shrift o'lchami" color="#Rang kodi" yoki "Rang nomi(inglizcha)"> ... </font>
+bunda [size] 1 dan 7 gacha bo'lishi mumkin.
+
+Qo’shimcha teglar
+<ACRONYM>Akronim(Qisqartmalar)</ACRONYM>
+<cite>Tsitata.Kursiv shriftda</cite>
+<code>Maxsus shrift</code>
+<dfn>Maxsus shrift</dfn>
+<em>Kursiv holda ajratib yozish</em>
+<kbd></kbd>
+<samp></samp>
+<strong>Qalin shriftda yozish</strong>
+<var>Kursiv holatda tasvirlash</var>
+
+Maxsus abzatsli teglar
+<address>Kursiv ko'rinishda ajratib yozish</address>
+<blockquote>Chapdan joy tashlab yozish</blockquote>
+<center>O'rtadan yozish</center>
+<pre>Matnlar HTML da yozilgan ko'rinishda tasvirlanadi</pre>
+
+Matnlarni ajratish
+<br>Satrni bo’lish, keyingi satrdan boshlab yozish
+<hr>Gorizontal chiziq
+Ko'rinishi:
+<hr size=”Qalinligi(butun son)” width=”kengligi” align=”left,center,right” [noshade] color=”rang”> Noshade qo’yilsa chiziq oddiy(uch o’lchamli ko’rinishda emas) tasvirlanadi. 
+<nobr><pre> bilan bir xil, lekin ko’p turli shriftlarni aks ettirmaydi<nobr>
+HTML da simvollarni tasvirlash
+Qo'shtirnoq(") - &quot;
+Ampersand(&) - &amp;
+Kichik belgisi(<) - &lt;
+Katta belgisi(>) - &gt;
+Bo'sh joy(probel) - &nbsp;
+Huquq belgisi(©) - &copy;
+Savdo markasi(®) - &reg;
+
+Ro’yxatlar
+1. <ul>
+yoki
+<ul type=disc|circle|square >
+<li>1
+<li>2
+</ul>
+Royxatga disc yoki aylana yoki to’rtburchak  qo’yiladi.
+yoki
+2. <ol type=”A|a|I|i|1” start=”{nomer}”>
+<li>birinchi
+<li>ikkinchi
+</ol>
+A – lotin alfavitining bosh harflari bilan nomerlash
+a - lotin alfavitining kichik harflari bilan nomerlash
+I – Rim raqami bilan (katta)
+i – Rim raqami bilan (kichik)
+1 – Arab raqami bilan nomerlash.
+3. <dl>
+<dt>so’z
+<dd>izoh
+<dt>so’z1
+<dd>izoh1
+…
+</dl>
+
+Giperssilka
+<a href=”{adres}”>nom</a>
+Joriy faylning biror qismini ochish uchun yakorlardan foydalaniladi:
+<a href=”#{qism}”>n – chi qism</a>
+…
+<a name=”qism”>n – chi qism</a>
+Boshqa bir faylning qismini ochish uchun:
+<a href=”kitob.html#n-qism”>kitob.html faylining n-qismi</a>
+Internet adresini ochish:
+<a href=”http://{adres}”>Sahifaga kirish</a>
+Electron pochta:
+<a href=”mailto:{e-mail}”>nom</a>
+
+Grafik qo’yish
+<img src=”{adres}” width=”{kengligi}” height=”{balandligi}” border=”{chegara qalinligi}” align=”left|right|top|texttop|middle|absmiddle|baseline|bottom|absbottom” vspace=”matngacha masofa(vertikal)” hspace=”matngacha masofa(gorizontal)”>
+
+Film qo’yish
+<img dynsrc=”{adress}” loop=-1|0 border=”{chegara}” alt=”so’z”>
+Fonga muzika qo’yish
+<bgsound src=”{adres}” balance=”{-10000 dan 10000 gacha}” loop=-1|0 {takrorlanishlar soni} volume=”{-10000 dan 0 gacha}”>
+
+Sahifa parametrlarini sozlash
+<body background=”{fon adresi}” bgcolor=”{sahifa fonining rangi}” text=”{rang}” link=”{giperssilka rangi}” vlink=”{giperssilka rangi}” alink=”{activlashgandagi rang}” bgproperties=”fixed” leftmargin=”{chap tomondan joy tashlash}” rightmargin=”…” topmargin=”…” bottommargin=”…” scroll=”yes|no”>
+
+Framelar
+<frameset rows|cols=”{frame o’lchami}” border=”{chegara qalinligi}” bordercolor=”{chiziq rangi}” frameborder=”yes|no|0”>
+<frame src=”{sahifa adresi}” name=”{frame nomi}” marginwidth=”{gorizontal oraliq}” marginheight=”{vertical oraliq}” scrolling=”yes|no|0” bordercolor=”{chegara rangi}” [noresize]>
+</frameset>
+Misol:
+<html>
+<head>
+<title>Frame</title>
+</head>
+<frameset rows="10%,90%,*" border="1" frameborder=yes>
+<frame src="1.htm" name="frm1" marginwidth="12" marginheight="12">
+<frameset cols="20%,*">
+<frame src="2.htm" name="frm2" noresize>
+<frame src="main.htm" name="main">
+</frameset>
+</frameset>
+</html>
+
+Targetlar
+target=”{frame nomi}|_self | _parent | _top | _blank”
+{frame nomi} – ko’rsatilgan framega ochish;
+_self – framening o’ziga ochish;
+_parent – joriy oynaga faqat ssilka berilgan sahifani ochish;
+_top – yuqori framega ochish;
+_blank – yangi oynaga ochish;
+
+Iframe
+<iframe src=”{sahifa adresi}” width=”{frame kengligi}” height=”{frame bo’yi}” align=”left | center |  right” frameborder=”yes | no | 1 | 0” scrolling=”auto | no” vspace=”{vertical mas.matngacha}” hspace=”{gorizontal mas.matngacha }” border=”{chiziq qalinligi}”>
+…
+</iframe>
